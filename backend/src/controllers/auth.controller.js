@@ -15,9 +15,9 @@ export const signup = async(req,res)=>{
         if(await User.findOne({email})) {
             return res.status(400).json({'message': 'User with this email already exists'})
         }
-        let maxBorrowLimit = 3;
+        let maxBorrowLimit = 7;
         if(role === 'Researcher'){
-            maxBorrowLimit = 5;
+            maxBorrowLimit = 10;
         }
          // Create new user
          const newUser = new User({ name, email, password, role,maxBorrowLimit });

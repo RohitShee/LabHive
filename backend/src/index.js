@@ -4,6 +4,7 @@ import cookieParser from 'cookie-parser'
 import cors from 'cors';
 
 import authRoute from './routes/auth.route.js';
+import itemRoute from './routes/item.route.js';
 import {connectDB} from './lib/db.js';
 
 const app = express();
@@ -19,6 +20,7 @@ app.use(cors({
 }))
 
 app.use('/api/auth', authRoute);
+app.use('/api/items', itemRoute);
 
 app.listen(PORT, ()=>{
     console.log('Server started on http://localhost:'+PORT);
