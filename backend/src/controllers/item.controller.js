@@ -1,4 +1,4 @@
-import Item from '../models/Item.js';
+import Item from "../models/item.model.js";
 import { v4 as uuidv4 } from 'uuid';
 
 export const addNewItem = async (req, res) => {
