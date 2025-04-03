@@ -8,7 +8,7 @@ const instanceSchema = new mongoose.Schema({
 
 // Main Item schema
 const itemSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true,unique : true },
   description: { type: String, required: true },
   category: { type: String, required: true },
   totalQuantity: { type: Number, required: true },

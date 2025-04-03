@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import authRoute from './routes/auth.route.js';
 import itemRoute from './routes/item.route.js';
+import logRoute from './routes/log.route.js';
 import {connectDB} from './lib/db.js';
 
 const app = express();
@@ -21,6 +22,7 @@ app.use(cors({
 
 app.use('/api/auth', authRoute);
 app.use('/api/items', itemRoute);
+app.use('/api/log',logRoute);
 
 app.listen(PORT, ()=>{
     console.log('Server started on http://localhost:'+PORT);

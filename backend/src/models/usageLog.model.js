@@ -12,7 +12,7 @@ const usageLogSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now },
     expectedReturnDate: { 
         type: Date,
-        required: function() { return this.action === 'borrowed'; }
+        required: true,
     }
 }, { timestamps: true });
 
